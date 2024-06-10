@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import './global.css'
+import logoImg from '../assets/logo.svg'
+import profileImg from '../assets/imgAccount.svg'
+import Image from "next/image";
+import { SearchProducts } from "./components/SearchProducts";
+import { ShoppingBagOpen } from '@phosphor-icons/react/dist/ssr'
+import Link from "next/link";
 
 const roboto = Roboto({
   weight: ['400', '700'], 
@@ -20,7 +26,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.className} bg-gray900 text-gray100 font-normal`}>
+      <body className={`${roboto.className} bg-black text-gray50 font-normal`}>
+        <header className="mt-8 mx-10 p-1 flex justify-between items-center">
+          <form className="flex items-center gap-5">
+            <Link href="/" className="cursor-pointer">
+              <Image src={logoImg} alt="Logo dev store" />
+            </Link>
+            <SearchProducts />
+          </form>
+
+          <div>
+            <nav>
+              <ul className="flex items-center gap-4">
+                <li>
+                  <Link href="/cart" className="flex items-center gap-2 hover:text-gray300 cursor-pointer">
+                    <ShoppingBagOpen size={20} />
+                    Cart
+                    <span>(3)</span>
+                  </Link>
+                </li>
+                <li>
+                  <div className="w-1 h-4 bg-zinc700"></div>
+                </li>
+                <li>
+                  <Link href="/account" className="flex items-center gap-2 hover:text-gray300 cursor-pointer">
+                    Account
+                    <Image src={profileImg} alt="profile img" />
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
         {children}
       </body>
     </html>

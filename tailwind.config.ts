@@ -9,14 +9,20 @@ const config: Config = {
   theme: {
     colors: {
       white: '#fff',
+      black: '#111111',
 
-      gray900: '#121214',
-      gray800: '#202024',
-      gray300: '#c4c4cc',
+      gray50: '#F9FAFB',
       gray100: '#e1e1e6',
+      gray300: '#c4c4cc',
+      gray800: '#202024',
+      gray900: '#121214',
 
       green500: '#00875f',
       green300: '#00b37e',
+      zinc500: '#71717A',
+      zinc700: '#3F3F46',
+      zinc900: '#18181B',
+
 
     },
     extend: {
