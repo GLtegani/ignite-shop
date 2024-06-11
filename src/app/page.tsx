@@ -2,9 +2,12 @@ import Image from "next/image";
 import comeToAIClothe from '../assets/clothes/comeToAI.svg'
 import neverStopClothe from '../assets/clothes/neverStopClothe.svg'
 import doWhileClothe from '../assets/clothes/doWhileClothe.svg'
+import { Clothe } from "./components/Clothe";
 
+export default async function Home () {
+  const response = await fetch("http://localhost:5000/homeClothes")
+  const data = await response.json()
 
-export default function Home() {
   return (
     <div className="mt-5 mx-10 mb-8 grid grid-cols-2 grid-rows-5 gap-6 h-screen place-content-center">
       <div className="bg-zinc900 col-start-1 row-span-4">

@@ -1,0 +1,16 @@
+{
+   "homeClothes": [
+      {
+         "title": "Never Stop Clothe",
+         "src": "./src/assets/clothes/neverStopClothe.svg"
+      },
+      {
+         "title": "Come to AI Clothe",
+         "src": "./src/assets/clothes/comeToAI.svg"
+      },
+      {
+         "title": "Do While Clothe",
+         "src": "./src/assets/clothes/doWhileClothe.svg"
+      }
+   ]
+}
